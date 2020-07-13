@@ -7,7 +7,7 @@ import WithSpinner from "../with-spinner/with-spinner.component";
 import CollectionsOverview from "./collections-overview.component";
 
 const mapStateToProps = createStructuredSelector({
-  // use the same name as WithSpinner expexting (isLoading)
+  // use the same name as WithSpinner expecting (isLoading)
   isLoading: selectCollectionFetching,
 });
 
