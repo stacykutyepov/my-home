@@ -65,7 +65,6 @@ export const convertCollectionSnapshotToMap = (collections) => {
             items
         }
     });
-    // console.log(transformedCollection);
     
     return transformedCollection.reduce((accumulator, collection) => {
         accumulator[collection.title.toLowerCase()] = collection;
@@ -83,11 +82,3 @@ const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
-// How to get data from the database
-// const firestore = firebase.firestore();
-// firestore.collection('user').doc('M6oHW2BVNlZLHzIPhNMf').collection('cartItems').doc('DSAUn1FMacI5Oz80mUqk');
-
-// firestore.doc('./users/M6oHW2BVNlZLHzIPhNMf/cartItems/DSAUn1FMacI5Oz80mUqk');
-
-// firestore.collection('./users/M6oHW2BVNlZLHzIPhNMf/cartItems/');
