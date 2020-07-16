@@ -4,7 +4,7 @@ import { createStructuredSelector } from "reselect";
 
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
-import { ReactComponent as Logo } from "../../assets/crown.svg";
+import HeartIcon from '../heart-icon/heart-icon.component';
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selector";
 
@@ -20,24 +20,25 @@ import {
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
     <LogoContainer to="/">
-      <Logo className="logo" />
+      myhome
     </LogoContainer>
     <OptionsContainer>
       <OptionLink to="/shop">
-        SHOP
+        Shopping
       </OptionLink>
       <OptionLink to="/shop">
-        CONTACT
+        Contacts
       </OptionLink>
       {currentUser ? (
         <OptionLink as="div" onClick={() => auth.signOut()}>
-          SIGN OUT
+          Sign Out
         </OptionLink>
       ) : (
         <OptionLink to="/signin">
-          SIGN IN
+          Sign In
         </OptionLink>
       )}
+      <HeartIcon/>
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}

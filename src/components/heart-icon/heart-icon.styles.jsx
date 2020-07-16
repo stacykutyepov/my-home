@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { ReactComponent as ShoppingIconSVG } from '../../assets/shopping-bag.svg';
+import { ReactComponent as HeartIconSVG } from '../../assets/heart.svg';
 
-export const CartContainer = styled.div`
+export const HeartContainer = styled.div`
   width: 45px;
   height: 45px;
   position: relative;
@@ -12,13 +12,13 @@ export const CartContainer = styled.div`
   cursor: pointer;
 `;
 
-export const ShoppingIcon = styled(ShoppingIconSVG)`
+export const ShoppingIcon = styled(HeartIconSVG)`
   width: 20px;
   height: 20px;
 `;
 
 export const ItemCountContainer = styled.span`
-  position: absolute;
+ position: absolute;
   line-height: 10px;
   text-align: center;
   background-color: red;

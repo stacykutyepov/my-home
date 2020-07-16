@@ -53,7 +53,7 @@ export const CustomButtonContainer = styled.button`
   font-size: 15px;
 
   text-transform: uppercase;
-  font-family: "Open Sans Condensed";
+  font-family: "Quicksand";
   font-weight: bolder;
   cursor: pointer;
   display: flex;
