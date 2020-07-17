@@ -10,6 +10,7 @@ import {
   BackgroundImage,
   NameContainer,
   PriceContainer,
+  AddFavorite
 } from "./collection-item.styles";
 
 const CollectionItem = ({ item, addItem }) => {
@@ -25,6 +26,7 @@ const CollectionItem = ({ item, addItem }) => {
         <NameContainer>{name}</NameContainer>
         <PriceContainer>{price}$</PriceContainer>
       </CollectionFooterContainer>
+      <AddFavorite/>
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>

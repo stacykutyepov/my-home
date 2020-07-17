@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import CustomButton from "../custom-button/custom-button.component";
 
+import { ReactComponent as HeartIconSVG } from "../../assets/heart.svg";
+
 export const CollectionItemContainer = styled.div`
   width: 22vw;
   display: flex;
@@ -35,6 +37,15 @@ export const CollectionItemContainer = styled.div`
   }
 `;
 
+export const AddFavorite = styled(HeartIconSVG)`
+  width: 10%;
+  opacity: 0.7;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+`;
+
 export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
@@ -47,7 +58,7 @@ export const AddButton = styled(CustomButton)`
     opacity: 0.9;
     min-width: unset;
     padding: 0 10px;
-    outline:none;
+    outline: none;
   }
 `;
 
@@ -64,6 +75,7 @@ export const CollectionFooterContainer = styled.div`
   height: 5%;
   display: flex;
   justify-content: space-between;
+  align-self: flex-start;
   font-size: 1.1rem;
   @media screen and (max-width: 800px) {
     padding-right: 15px;
@@ -75,6 +87,4 @@ export const NameContainer = styled.span`
   margin-bottom: 15px;
 `;
 
-export const PriceContainer = styled.span`
-  width: 10%;
-`;
+export const PriceContainer = styled.span``;
