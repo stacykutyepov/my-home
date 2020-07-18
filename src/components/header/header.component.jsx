@@ -4,7 +4,7 @@ import { createStructuredSelector } from "reselect";
 
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
-import HeartIcon from '../heart-icon/heart-icon.component';
+import HeartIcon from "../heart-icon/heart-icon.component";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selector";
 
@@ -17,28 +17,22 @@ import {
   OptionLink,
 } from "./header.styles";
 
-const Header = ({ currentUser, hidden }) => (
+const Header = ({ currentUser, history, hidden }) => (
   <HeaderContainer>
-    <LogoContainer to="/">
-      myhome
-    </LogoContainer>
+    <LogoContainer to="/">myhome</LogoContainer>
     <OptionsContainer>
-      <OptionLink to="/shop">
-        Shopping
-      </OptionLink>
-      <OptionLink to="/shop">
-        Contacts
-      </OptionLink>
+      <OptionLink to="/shop">Shopping</OptionLink>
+      <OptionLink to="/shop">Contacts</OptionLink>
       {currentUser ? (
         <OptionLink as="div" onClick={() => auth.signOut()}>
           Sign Out
         </OptionLink>
       ) : (
-        <OptionLink to="/signin">
-          Sign In
-        </OptionLink>
+        <OptionLink to="/signin">Sign In</OptionLink>
       )}
-      <HeartIcon/>
+      <OptionLink to="/favorite">
+        <HeartIcon />
+      </OptionLink>
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}
