@@ -12,6 +12,8 @@ export const HeaderContainer = styled.div`
     height: 60px;
     padding: 10px;
     margin-bottom: 20px;
+    flex-direction: column;
+    height: 100px;
   }
 `;
 
@@ -34,7 +36,8 @@ export const OptionsContainer = styled.div`
   justify-content: flex-end;
 
   @media (max-width: 800px) {
-  width: 80%;
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 
@@ -43,6 +46,7 @@ export const OptionLink = styled(Link)`
   cursor: pointer;
 
   @media (max-width: 800px) {
-  padding: 10px;
+    padding: 5px;
   }
+
 `;

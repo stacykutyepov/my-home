@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import CustomButton from "../custom-button/custom-button.component";
-import AddToFavorite from '../add-to-favorite/add-to-favorite.component';
+import AddToFavorite from "../add-to-favorite/add-to-favorite.component";
 
 // import { ReactComponent as HeartFilledIconSVG } from "../../assets/heart-full.svg";
 // import { ReactComponent as HeartIconSVG } from "../../assets/heart.svg";
@@ -30,7 +30,6 @@ export const CollectionItemContainer = styled.div`
   }
   @media (max-width: 800px) {
     width: 40vw;
-
     &:hover {
       .image {
         opacity: unset;
@@ -55,6 +54,11 @@ export const AddToFavoriteIcon = styled(AddToFavorite)`
   &:hover {
     opacity: unset;
   }
+
+  @media (max-width: 812px) {
+    display: block;
+    opacity: 0.9;
+  }
 `;
 
 export const AddButton = styled(CustomButton)`
@@ -65,6 +69,15 @@ export const AddButton = styled(CustomButton)`
   display: none;
 
   @media (max-width: 800px) {
+    font-size: 10px;
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+    outline: none;
+  }
+  @media (min-width: 375px) {
+    font-size: 10px;
     display: block;
     opacity: 0.9;
     min-width: unset;
