@@ -19,7 +19,7 @@ export const ShoppingIcon = styled(HeartIconSVG)`
 
 export const ItemCountContainer = styled.span`
  position: absolute;
-  line-height: 10px;
+  line-height: 11px;
   text-align: center;
   background-color: red;
   color: white;
