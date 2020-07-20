@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
     font-family: "Quicksand", sans-serif;
     padding: 20px 60px;
+    margin-bottom: 60px;
 
     @media screen and (max-width: 800px) {
     padding: 10px;
