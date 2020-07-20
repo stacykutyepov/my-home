@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { SelectFavorite } from "../../redux/favorite/favorite.selectors";
+import { selectFavoriteItemsCount } from "../../redux/favorite/favorite.selectors";
 
 import {
   HeartContainer,
@@ -10,15 +10,15 @@ import {
   ItemCountContainer,
 } from "./heart-icon.styles";
 
-const HeartIcon = ({ onClick, itemFavoriteCount }) => (
+const HeartIcon = ({ onClick, favoriteItemsCount }) => (
   <HeartContainer onClick={onClick}>
     <ShoppingIcon />
-    <ItemCountContainer>{itemFavoriteCount.length}</ItemCountContainer>
+    <ItemCountContainer>{favoriteItemsCount}</ItemCountContainer>
   </HeartContainer>
 );
 
 const mapStateToProps = createStructuredSelector({
-  itemFavoriteCount: SelectFavorite,
+  favoriteItemsCount: selectFavoriteItemsCount,
 });
 
 export default connect(mapStateToProps)(HeartIcon);
