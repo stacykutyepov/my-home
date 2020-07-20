@@ -13,6 +13,11 @@ export const Tittle = styled.h2`
   margin: 0 auto 30px;
 `;
 
+export const Paragraph = styled.p`
+font-size: 20px;
+text-align: center;
+`
+
 export const ItemsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

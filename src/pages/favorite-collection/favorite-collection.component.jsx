@@ -7,27 +7,29 @@ import CollectionItem from "../../components/collection-item/collection-item";
 import {
   CollectionPageContainer,
   Tittle,
+  Paragraph,
   ItemsContainer,
 } from "./favorite-collection.styles";
 
 const FavoritePage = ({ favoriteCollection }) => {
-  console.log(favoriteCollection);
+  // console.log(favoriteCollection);
   return (
     <CollectionPageContainer>
       <Tittle>favorite</Tittle>
+     {favoriteCollection.length ? (
       <ItemsContainer>
         {favoriteCollection.map((item) => (
           <CollectionItem key={item.id} item={item} typeOfAction={false} />
         ))}
       </ItemsContainer>
+
+     ) : (
+       <Paragraph>No Favorite Items :( </Paragraph>
+     )}
     </CollectionPageContainer>
   );
 };
 
-// const mapStateToProps = createStructuredSelector({
-//   cartItems: selectCartItems,
-//   total: selectCartTotal,
-// });
 
 const mapStateToProps = createStructuredSelector({
   favoriteCollection: SelectFavorite,

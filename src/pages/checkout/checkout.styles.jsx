@@ -26,17 +26,17 @@ export const CheckoutHeaderContainer = styled.div`
 
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
-  width: 23%;
+  /* width: 23%;
   &:last-child {
     width: 8%;
-  }
-
+  } */
+/* 
   @media (max-width: 800px) {
     width: 22%;
     &:last-child {
       width: 12%;
     }
-  }
+  } */
 `;
 
 export const TotalContainer = styled.div`
