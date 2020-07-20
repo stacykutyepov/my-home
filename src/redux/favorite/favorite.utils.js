@@ -7,6 +7,7 @@ export const addItemToFavorite = (favoriteItems, itemToAdd) => {
 }
 
 
-export const deleteItemFromFavorite = (item, itemToDelete) => {
-
+export const deleteItemFromFavorite = (favoriteItems, itemToDelete) => {
+    const newFavoriteItems = favoriteItems.filter(item => item.id !== itemToDelete.id);
+    return [...newFavoriteItems]
 }
