@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart.actions";
-import { addToFavorite } from "../../redux/favorite/favorite.actions";
+import {
+  addToFavorite,
+  deleteItemFromFavorite,
+} from "../../redux/favorite/favorite.actions";
 
 import {
   CollectionItemContainer,
@@ -11,9 +14,16 @@ import {
   NameContainer,
   PriceContainer,
   AddToFavoriteIcon,
+  RemoveFromFavorite,
 } from "./collection-item.styles";
 
-const CollectionItem = ({ item, addItem, addToFavorite }) => {
+const CollectionItem = ({
+  item,
+  addItem,
+  addToFavorite,
+  deleteFavorite,
+  typeOfAction,
+}) => {
   const { name, price, imageUrl } = item;
   return (
     <CollectionItemContainer>
@@ -26,10 +36,20 @@ const CollectionItem = ({ item, addItem, addToFavorite }) => {
         <NameContainer>{name}</NameContainer>
         <PriceContainer>{price}$</PriceContainer>
       </CollectionFooterContainer>
-      <AddToFavoriteIcon
-        className="add-favorite"
-        onClick={() => addToFavorite(item)}
-      />
+      {typeOfAction ? (
+        <AddToFavoriteIcon
+          className="favorite-icon"
+          onClick={() => addToFavorite(item)}
+        />
+      ) : (
+        <RemoveFromFavorite
+          className="favorite-icon"
+          onClick={() => deleteFavorite(item)}
+        >
+          &#10005;
+        </RemoveFromFavorite>
+      )}
+
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>
@@ -40,6 +60,7 @@ const CollectionItem = ({ item, addItem, addToFavorite }) => {
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
   addToFavorite: (item) => dispatch(addToFavorite(item)),
+  deleteFavorite: (item) => dispatch(deleteItemFromFavorite(item)),
 });
 
 export default connect(null, mapDispatchToProps)(CollectionItem);
