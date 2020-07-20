@@ -3,9 +3,6 @@ import styled from "styled-components";
 import CustomButton from "../custom-button/custom-button.component";
 import AddToFavorite from "../add-to-favorite/add-to-favorite.component";
 
-// import { ReactComponent as HeartFilledIconSVG } from "../../assets/heart-full.svg";
-// import { ReactComponent as HeartIconSVG } from "../../assets/heart.svg";
-
 export const CollectionItemContainer = styled.div`
   width: 22vw;
   display: flex;
@@ -19,7 +16,7 @@ export const CollectionItemContainer = styled.div`
       opacity: 0.8;
     }
 
-    .add-favorite {
+    .favorite-icon {
       display: block;
     }
 
@@ -39,6 +36,25 @@ export const CollectionItemContainer = styled.div`
         opacity: unset;
       }
     }
+  }
+`;
+export const RemoveFromFavorite = styled.div`
+  cursor: pointer;
+  font-size: 25px;
+  opacity: 0.7;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+  color: white;
+
+  &:hover {
+    opacity: unset;
+  }
+
+  @media (max-width: 812px) {
+    display: block;
+    opacity: 0.9;
   }
 `;
 
