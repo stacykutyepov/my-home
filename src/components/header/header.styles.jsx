@@ -29,7 +29,7 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const OptionsContainer = styled.div`
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
   align-items: center;
