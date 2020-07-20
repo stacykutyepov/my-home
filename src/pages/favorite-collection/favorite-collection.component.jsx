@@ -17,7 +17,7 @@ const FavoritePage = ({ favoriteCollection }) => {
       <Tittle>favorite</Tittle>
       <ItemsContainer>
         {favoriteCollection.map((item) => (
-          <CollectionItem key={item.id} item={item} />
+          <CollectionItem key={item.id} item={item} typeOfAction={false} />
         ))}
       </ItemsContainer>
     </CollectionPageContainer>

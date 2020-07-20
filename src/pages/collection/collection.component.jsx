@@ -17,7 +17,11 @@ const CollectionPage = ({ collection }) => {
       <Tittle>{title}</Tittle>
       <ItemsContainer>
         {items.map((item) => (
-          <CollectionItem key={item.id} item={item} />
+          <CollectionItem
+            key={item.id}
+            item={item}
+            typeOfAction={true}
+          />
         ))}
       </ItemsContainer>
     </CollectionPageContainer>
