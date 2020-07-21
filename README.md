@@ -1,7 +1,8 @@
 <div >
-   
+   <img width="100%" alt="Screen Shot 2020-07-21 at 12 55 29 PM" src="https://user-images.githubusercontent.com/62475313/88083853-8ad18d80-cb51-11ea-955a-a153ec0fd288.png">
+
   <h1>Overview and Goals</h1>
-  <p>Build a functional, responsive E-commerce Website with React & Redux and Firebase</p>
+  <p>myhome is a functional, responsive E-commerce Website created with React & Redux and Firebase.</p>
  <h2> Visit the Website: <a href="https://my-ehome.herokuapp.com/">my-ehome </a></h2>
   <ul>
      <h2>React & Redux.</h2>
