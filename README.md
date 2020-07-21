@@ -27,9 +27,7 @@
  <img src="https://user-images.githubusercontent.com/62475313/88081300-2cef7680-cb4e-11ea-8fe5-680d996d768f.gif" alt="favorite-preview" width="600px">
  <h1>Checkout Page</h1>
  <img src="https://user-images.githubusercontent.com/62475313/88081200-0cbfb780-cb4e-11ea-837a-aab91f9e6b3c.gif" alt="checkout-preview" width="600px">
- <h1>Stripe Payments</h1>
- Handling online payments with Stripe API
+ <h1>Handling online payments with Stripe API</h1>
 <img src="https://user-images.githubusercontent.com/62475313/88081057-e6018100-cb4d-11ea-83a5-1f97c0542f1a.gif" alt="stripe-preview" width="600px">
-
 </div>
  
