@@ -6,7 +6,7 @@
  <h2> Visit the Website: <a href="https://my-ehome.herokuapp.com/">my-ehome </a></h2>
   <ul>
      <h2>React & Redux.</h2>
-     <li>Use Redux for state managment.</li>
+     <li>Use Redux for state management.</li>
     <li>Created reusable components with Styled-Components.</li>
     <li>Routing with React Router.</li>
     <li>Redux Thunk for asynchronous actions like bringing Data from Firestore To the App.</li>
