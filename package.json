@@ -7,7 +7,7 @@
     "@testing-library/react": "11.1.2",
     "@testing-library/user-event": "12.5.0",
     "firebase": "7.24.0",
-    "heroku": "7.44.0",
+    "heroku": "7.47.4",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-redux": "7.2.1",
