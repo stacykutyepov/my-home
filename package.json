@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.2",
     "@testing-library/user-event": "12.7.1",
-    "firebase": "8.1.2",
+    "firebase": "8.2.10",
     "heroku": "7.47.13",
     "react": "17.0.1",
     "react-dom": "17.0.1",
